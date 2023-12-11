@@ -1,0 +1,19 @@
+//type inference
+//typescript guess the type if it not mention using the assigned value to the righthand side
+//Example:1
+let rollNumber=10;
+console.log(typeof rollNumber);
+//rollNumber="Rachel";
+//error
+
+//works function return values:
+
+function getnu(){
+    return 75;
+}
+let n=getnu();
+
+console.log(typeof n);
+
+
+
