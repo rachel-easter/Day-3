@@ -1,0 +1,14 @@
+//Union type:
+//It is used in order to have more than one datatype for the specific variable
+//Example-1
+
+type Details='string'|'number';//type union
+let Name:string="Rachel";
+let age:number=21;
+
+console.log(Name);
+console.log(age);
+
+console.log(typeof Name);
+console.log(typeof age);
+
