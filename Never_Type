@@ -1,0 +1,45 @@
+//Never Type in typescript:
+//This type is used when the function contains infinite loop and also return an error
+//example
+
+// Function that always throws an error and has a return type of 'never'
+function throwError(message: string): never {
+    throw new Error(message);
+}
+
+// Example usage
+function processResult(result: string | number) {
+    if (typeof result === 'string') {
+        console.log("String result:", result);
+    } else if (typeof result === 'number') {
+        console.log("Number result:", result);
+    } else {
+        // Calling the function that returns 'never' in case of an unexpected type
+        throwError("Unexpected result type!");
+    }
+}
+
+// Valid usages
+processResult("Hello");
+processResult(42);
+
+// This line will raise a compilation error because 'boolean' is not allowed
+//processResult(true);
+
+//Example-2:clearly explained:
+
+
+type User='standard'|'admin';
+
+function login(user:User){
+    switch(user){
+        case 'standard':
+            return true;
+        case 'admin':
+            return true;    
+
+        default:
+            const nothing:never=user;
+            throw 'enter the valid types for login';    
+    }
+}
