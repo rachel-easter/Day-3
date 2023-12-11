@@ -1,0 +1,9 @@
+//String literal
+//It is used to assign specific value for the variable
+
+//Example
+
+let color:'red'|'blue';
+ color='red';//valid
+//color='black';//invalid
+ console.log(color);
